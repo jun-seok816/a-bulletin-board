@@ -45,9 +45,7 @@ React와 css파일을 번들링하여 웹페이지 성능 최적화 하였습니
 
 
 <br/>
-<div align ="center">
-  <h1>Directory tructure Description</h1>
-</div>
+
 
 
 
