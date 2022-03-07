@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>📅만년달력 만들기📆</h1>
+  <h1>👀Single Page Application</h1>
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjun-seok816%2F-perennial-calendar&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 
 </div>
@@ -26,7 +26,7 @@
 ### Javascript
 
 프로젝트에 필요한 메소드를 담고있는 클래스를 활용하였습니다
-클래스에 대한 정확한 정보는 [__나만의 js_Date클래스__]에 정리해두었습니다.
+클래스에 대한 정확한 정보는 [__junGallery__]에 정리해두었습니다.
 
 
 
@@ -63,7 +63,7 @@ npm install -g create-react-app
 - js_Date.js `만년달력 프로젝트에 필요한 메소드를 담고있는 클래스입니다`
 
 
-[__Date생성자__]: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
+[__junGallery__]: http://jun.cafe24app.com/
 [__나만의 js_Date클래스__]: https://github.com/jun-seok816/my_-js_Date-Class 
 [__CreateReactApp__]:https://github.com/facebook/create-react-app
 
