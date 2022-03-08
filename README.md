@@ -13,11 +13,22 @@
 <h3 align="center">만들어진 사이트는 http://jun.cafe24app.com/ 에서 확인하실 수 있습니다. </h3>   
 <br/><br/><br/>
 
+
+<br/>
+<div align="center">
+    <h1>Architecture</h1>
+    <p align="center">
+      <img src="https://user-images.githubusercontent.com/72478198/157164247-4535b61a-f10c-48c3-a7a2-df47deec8ea9.png" alt="animated" />
+    </p>
+ </div> 
+<br/>
+
 <div align="center">
   <h1>Front-end Stack</h1>
   <img src="https://img.shields.io/badge/React-3D41C8?style=flat-square&logo=React&logoColor=white"/>
   <img src="https://img.shields.io/badge/Webpack-1dc207?style=flat-square&logo=Webpack&logoColor=white"/>
 </div>
+
 
 
 
