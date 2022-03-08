@@ -9,7 +9,9 @@
   <img src="https://user-images.githubusercontent.com/72478198/156970307-0734d2a3-5f22-4254-9ab9-0b52c9de429d.gif" alt="animated" />
 </p>
 <br/>
-
+<p align="center">
+  <b>본 문서는 REST API 와 React를 사용하여 만든 게시판에대해 안내합니다</b>
+</p>
 <h3 align="center">만들어진 사이트는 http://jun.cafe24app.com/ 에서 확인하실 수 있습니다. </h3>   
 <br/><br/><br/>
 
@@ -17,7 +19,7 @@
 
 * Architecture
 * Front 구조
-* [REST API Reference](Login-API)
+* [REST API Reference](-Login-API)
 
 <br/>
 <div align="center">
