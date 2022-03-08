@@ -44,7 +44,7 @@
 
 ### Description
 
-사용자 인증 
+사용자 인증 API
 
 ### Request
 
@@ -98,7 +98,7 @@ Host: http://jun.cafe24app.com/
 
 ### Description
 
-회원가입 및 사용자 인증
+회원가입 및 사용자 인증API
 
 ### Request
 
@@ -133,7 +133,7 @@ Content-Type: application/json
 
 ### Description
 
-Session이 있는지에 따라 로그인상태 체크
+Session이 있는지에 따라 로그인상태 체크하는API
 
 ### Request
 
