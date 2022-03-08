@@ -296,6 +296,202 @@ Content-Type: application/json
 <br/>
 
 
+## Main/:category API
+
+### Description
+
+카테고리에 해당하는 게시글 목록을 반환하는 API
+
+### Request
+
+#### URL
+  
+```javascript
+GET /Notice/Main/:category HTTP/1.1
+Host: http://jun.cafe24app.com/
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|:category|String|머리글 |true|
+
+  
+<br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 목록반환 성공 여부 |true|
+|message|String|게시글 목록반환 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+## Main/:id API
+
+### Description
+
+ID에 해당하는 게시글정보를 반환하는 API
+
+### Request
+
+#### URL
+  
+```javascript
+GET /Notice/Main/:id HTTP/1.1
+Host: http://jun.cafe24app.com/
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|:id|Number|게시글 고유번호|true|
+
+  
+<br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 정보반환 성공 여부 |true|
+|message|String|게시글 정보반환 실패 시 반환되는 메시지|false|
+|database|Object|게시글 정보|false|
+
+<br/>
+
+## DatInsert API
+
+### Description
+
+게시글에  댓글작성 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Dat/Insert HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_number|Number|게시글의 고유번호|true|
+|f_user|String|댓글을 작성한 유저|true|
+|f_word|String|댓글의 본문|true|
+ 
+<br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|댓글 작성성공 여부 |true|
+|message|String|댓글작성 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+
+## DatUpdate API
+
+### Description
+
+게시글에 있는 댓글수정 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Dat/Update HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_number|Number|게시글의 고유번호|true|
+|f_user|String|댓글을 작성한 유저|true|
+|f_word|String|댓글의 본문|true|
+ 
+<br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|댓글 작성성공 여부 |true|
+|message|String|댓글작성 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+## DatDelete API
+
+### Description
+
+게시글에 있는 댓글삭제 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Dat/Delete HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_datNum|Number|댓글의 고유번호|true|
+ 
+<br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|댓글 삭제성공 여부 |true|
+|message|String|댓글삭제 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+## Dat/Select/:id API
+
+### Description
+
+게시글에 있는 댓글목록 반환 API
+
+### Request
+
+#### URL
+  
+```javascript
+GET /Dat/Delete HTTP/1.1
+Host: http://jun.cafe24app.com/
+```
+ 
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|댓글 검색성공 여부 |true|
+|message|String|댓글검색 실패시 반환되는 메시지|false|
+|database|Object|댓글목록에 대한 정보|false|
+
+<br/>
+
 <div align="center">
   <h1>Front-end Stack</h1>
   <img src="https://img.shields.io/badge/React-3D41C8?style=flat-square&logo=React&logoColor=white"/>
