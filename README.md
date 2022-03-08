@@ -34,6 +34,52 @@
 <br/>
 
 
+# REST API Reference
+
+<br/>
+
+이 문서는 REST API를 사용한 로그인 구현 방법을 안내합니다.
+
+<br/>
+
+## 사용자 인증 관련 API  
+
+<br/>
+  
+  ### Request
+  
+  #### URL
+  
+  ```javascript
+  GET /Login HTTP/1.1
+  Host: http://jun.cafe24app.com/
+  ```
+  
+  <br/>
+  
+  #### Response
+  
+  <br/>
+  
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|login|Boolean|사용자의 로그인 성공 여부|true|
+|message|String|인증 실패 시 반환되는 에러 메시지|false|
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div align="center">
   <h1>Front-end Stack</h1>
   <img src="https://img.shields.io/badge/React-3D41C8?style=flat-square&logo=React&logoColor=white"/>
