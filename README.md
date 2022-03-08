@@ -19,7 +19,7 @@
 
 * Architecture
 * Front 구조
-* [REST API Reference](-Login-API)
+* [REST API Reference](#Login-API)
 
 <br/>
 <div align="center">
