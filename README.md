@@ -23,6 +23,17 @@
  </div> 
 <br/>
 
+
+<br/>
+<div align="center">
+    <h1>Front 구조</h1>
+    <p align="center">
+      <img src="https://user-images.githubusercontent.com/72478198/157164745-43be341c-1130-4118-9151-07954b3779e8.png" alt="animated" />
+    </p>
+ </div> 
+<br/>
+
+
 <div align="center">
   <h1>Front-end Stack</h1>
   <img src="https://img.shields.io/badge/React-3D41C8?style=flat-square&logo=React&logoColor=white"/>
