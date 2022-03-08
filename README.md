@@ -143,7 +143,6 @@ Session이 있는지에 따라 로그인상태 체크하는API
 USE /Signup HTTP/1.1
 Host: http://jun.cafe24app.com/
 ```
-
 <br/>
   
 ### Response
@@ -155,6 +154,146 @@ Host: http://jun.cafe24app.com/
 
 <br/>
 
+## Write API
+
+### Description
+
+게시글 작성 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Notice/Write HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|h_title|String|게시글의 제목|true|
+|h_write|String|게시글의 본문|true|
+|h_radioBtn|String|게시글이 해당하는 글머리|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 업로드성공 여부 |true|
+|message|String|업로드 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+
+
+## Delete API
+
+### Description
+
+게시글 삭제 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Notice/Delete HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_number|Number|게시글의 고유번호|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 업로드성공 여부 |true|
+|message|String|업로드 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+## Update API
+
+### Description
+
+게시글 수정 API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Notice/Update HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_title|String|게시글의 제목|true|
+|f_post|String|게시글의 본문|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 수정성공 여부 |true|
+|message|String|수정 실패,성공 시 반환되는 메시지|true|
+
+<br/>
+
+## Recommend API
+
+### Description
+
+게시글 추천 API 한사람이 같은 게시글을 한번만 추천할 수 있게 구현
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Notice/Recommend HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|f_number|Number|게시글의 고유번호|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|게시글 추천성공 여부 |true|
+|message|String|추천 실패,성공 시 반환되는 메시지|true|
+
+<br/>
 
 
 <div align="center">
