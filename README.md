@@ -33,33 +33,41 @@
  </div> 
 <br/>
 
+<div align="center">
+  <h1>REST API Reference</h1>
+</div> 
 
-# REST API Reference
 
-<br/>
 
-이 문서는 REST API를 사용한 로그인 구현 방법을 안내합니다.
 
-<br/>
+## Login API
 
-## 사용자 인증 관련 API  
+### Description
 
-<br/>
+사용자 인증 
+
+### Request
+
+#### URL
   
-  ### Request
+```javascript
+POST /Login HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|h_id|String|사용자의 아이디|true|
+|h_password|String|사용자의 비밀번호|true|
+
   
-  #### URL
+ <br/>
   
-  ```javascript
-  GET /Login HTTP/1.1
-  Host: http://jun.cafe24app.com/
-  ```
-  
-  <br/>
-  
-  #### Response
-  
-  <br/>
+### Response
+
   
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -68,10 +76,86 @@
 
   
 
+## Logout API
 
 
+### Description
+
+세션을 삭제합니다
+
+### Request
+
+#### URL
+  
+```javascript
+GET /logout HTTP/1.1
+Host: http://jun.cafe24app.com/
+```
+
+  
+
+## Signup API
+
+### Description
+
+회원가입 및 
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Signup HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|h_id|String|사용자의 아이디|true|
+|h_password|String|사용자의 비밀번호|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|사용자의 로그인 성공 여부|true|
+|message|String|인증 실패 시 반환되는 에러 메시지|false|
 
 
+## Signup API
+
+### Request
+
+#### URL
+  
+```javascript
+POST /Signup HTTP/1.1
+Host: http://jun.cafe24app.com/
+Content-Type: application/json
+```
+
+#### Parameter
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|h_id|String|사용자의 아이디|true|
+|h_password|String|사용자의 비밀번호|true|
+
+  
+ <br/>
+  
+### Response
+
+|Name|Type|Description|Required|
+|---|---|---------|---|
+|error|Boolean|사용자의 로그인 성공 여부|true|
+|message|String|인증 실패 시 반환되는 에러 메시지|false|
 
 
 
