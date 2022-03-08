@@ -74,7 +74,7 @@ Content-Type: application/json
 |login|Boolean|사용자의 로그인 성공 여부|true|
 |message|String|인증 실패 시 반환되는 에러 메시지|false|
 
-  
+<br/>
 
 ## Logout API
 
@@ -92,13 +92,13 @@ GET /logout HTTP/1.1
 Host: http://jun.cafe24app.com/
 ```
 
-  
+<br/>
 
 ## Signup API
 
 ### Description
 
-회원가입 및 
+회원가입 및 사용자 인증
 
 ### Request
 
@@ -127,40 +127,33 @@ Content-Type: application/json
 |error|Boolean|사용자의 로그인 성공 여부|true|
 |message|String|인증 실패 시 반환되는 에러 메시지|false|
 
+<br/>
 
-## Signup API
+## LoginCheck API
+
+### Description
+
+Session이 있는지에 따라 로그인상태 체크
 
 ### Request
 
 #### URL
   
 ```javascript
-POST /Signup HTTP/1.1
+USE /Signup HTTP/1.1
 Host: http://jun.cafe24app.com/
-Content-Type: application/json
 ```
 
-#### Parameter
-
-|Name|Type|Description|Required|
-|---|---|---------|---|
-|h_id|String|사용자의 아이디|true|
-|h_password|String|사용자의 비밀번호|true|
-
-  
- <br/>
+<br/>
   
 ### Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
-|error|Boolean|사용자의 로그인 성공 여부|true|
-|message|String|인증 실패 시 반환되는 에러 메시지|false|
+|loginToken|String|사용자의 로그인 성공확인된 인증토큰|true|
 
 
-
-
-
+<br/>
 
 
 
