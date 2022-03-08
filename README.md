@@ -221,8 +221,8 @@ Content-Type: application/json
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
-|error|Boolean|게시글 업로드성공 여부 |true|
-|message|String|업로드 실패,성공 시 반환되는 메시지|true|
+|error|Boolean|게시글 삭제성공 여부 |true|
+|message|String|삭제 실패,성공 시 반환되는 메시지|true|
 
 <br/>
 
@@ -429,8 +429,8 @@ Content-Type: application/json
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
-|error|Boolean|댓글 작성성공 여부 |true|
-|message|String|댓글작성 실패,성공 시 반환되는 메시지|true|
+|error|Boolean|댓글수정 성공 여부 |true|
+|message|String|댓글수정 실패,성공 시 반환되는 메시지|true|
 
 <br/>
 
@@ -462,7 +462,7 @@ Content-Type: application/json
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
-|error|Boolean|댓글 삭제성공 여부 |true|
+|error|Boolean|댓글삭제 성공 여부 |true|
 |message|String|댓글삭제 실패,성공 시 반환되는 메시지|true|
 
 <br/>
@@ -478,7 +478,7 @@ Content-Type: application/json
 #### URL
   
 ```javascript
-GET /Dat/Delete HTTP/1.1
+GET /Dat/Select/:id HTTP/1.1
 Host: http://jun.cafe24app.com/
 ```
  
