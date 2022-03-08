@@ -4,7 +4,7 @@
 * [Architecture](#Architecture)
 * [Front 구조](#Front-구조)
 * [REST API Reference](#REST-API-Reference)
-
+* [DataBase]
 
 
 <div align="center">
@@ -542,12 +542,57 @@ Host: http://jun.cafe24app.com/
 <br/>
 
 
+# DataBase
+
+##  tbl_user
+
+사용자에 대한 정보를 담는 table
+
+|Name|Type|Description|Default Value|
+|---|---|---------|---|
+|ai_user|INT|유저의 고유 ID(PK)|AUTO_INCREMENT|
+|f_id|VARCHAR|유저의 ID|없음|
+|f_password|VARCHAR|유저의 PASSWORD|없음|
+
+
+##  tbl_noticeMain
+
+게시글에 대한 정보를 담는 table
+
+|Name|Type|Description|Default Value|
+|---|---|---------|---|
+|ai_number|INT|게시글의 고유 ID(PK)|AUTO_INCREMENT|
+|f_title|VARCHAR|게시글의 제목|없음|
+|f_writer|VARCHAR|게시글의 작성자|없음|
+|f_date|TIMESTAMP|게시글이 작성된 날짜|CURRENT_TIMESTAMP|
+|f_enterCount|INT|게시글의 조회수|0|
+|f_recommend|INT|게시글의 추천수|0|
+|f_post|LONGTEXT|게시글의 본문|없음|
+|f_datCount|INT|게시글에 달린 댓글갯수|0|
+|f_div|VARCHAR|게시글의 글머리|없음|
 
 
 
+##  tbl_recommend
 
+사용자가 특정게시물을 중복해서 추천했는지에 대한 정보를담는 table
 
+|Name|Type|Description|Default Value|
+|---|---|---------|---|
+|f_recommend|INT|추천기록, 사용자ID + 게시글 번호(UNIQUE)|없음|
+|f_number|INT|게시글의 번호|없음|
 
+##  tbl_dat
+
+댓글에 대한 정보를담는 table
+
+|Name|Type|Description|Default Value|
+|---|---|---------|---|
+|ai_datNum|INT|댓글의 고유 ID(PK)|AUTO_INCREMENT|
+|f_number|INT|게시글의 번호|없음|
+|f_user|INT|댓글 작성자|없음|
+|f_word|INT|댓글 본문|없음|
+|f_date|TIMESTAMP|댓글이 작성된 날짜|CURRENT_TIMESTAMP|
 
 [__junGallery__]: http://jun.cafe24app.com/
 
