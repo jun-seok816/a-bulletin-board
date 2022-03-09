@@ -618,7 +618,7 @@ rules:[
 ### babel-loader
 
 Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용하여 컴파일하도록 설정하였습니다.
-@babel/preset-env으로  ES2015+ syntax버전에 맞게 컴파일되도록 하였고,
+@babel/preset-env으로  ES2015+ syntax버전에 맞게 컴파일되도록 하였고,  
 @babel/preset-react으로 jsx파일을 컴파일되도록 하였습니다.
 
 ```javascript
@@ -656,8 +656,8 @@ typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여
 ### style-loader , css-loader , sass-loader
 
 확장자명이 .scss .css에 해당하는 파일을 컴파일하도록 설정하였습니다
-sass-loader로 scss파일을 컴파일 후 
-css-loader로 css파일을 컴파일 후
+sass-loader로 scss파일을 컴파일 후   
+css-loader로 css파일을 컴파일 후  
 style-loader로 최종 컴파일하도록 설정하였습니다.
 
 ```javascript
