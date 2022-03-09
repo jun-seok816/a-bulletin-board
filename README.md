@@ -610,9 +610,12 @@ node_modules 파일은 번들링하지 않도록 제외하였습니다.
 
 
 ```javascript
-rules:[
-  {exclude: /node_modules/,}
-]
+
+module:{
+  rules:[
+    {exclude: /node_modules/,}
+  ]
+}
 ```
 
 ### babel-loader
@@ -621,8 +624,11 @@ Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용�
 @babel/preset-env으로  ES2015+ syntax버전에 맞게 컴파일되도록 하였고,  
 @babel/preset-react으로 jsx파일을 컴파일되도록 하였습니다.
 
-```javascript
-  {
+```javascript  
+
+module:{
+  rules:[
+      {
           test: /\.jsx?$/,   // .js or .jsx 
           exclude: /node_modules/,
           use : [
@@ -634,7 +640,10 @@ Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용�
             },
           ],
         },
+  ]
+}
 ```
+
 
 ### ts-loader
 
@@ -642,7 +651,11 @@ typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여
 
 
 ```javascript
-  {
+
+    
+module:{
+  rules:[
+     {
       test: /\.tsx?$/,   
       exclude: /node_modules/,
       use : [
@@ -651,6 +664,8 @@ typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여
         }
       ],
     },
+  ]
+}
 ```
 
 ### style-loader , css-loader , sass-loader
@@ -660,8 +675,10 @@ sass-loader로 scss파일을 컴파일 후
 css-loader로 css파일을 컴파일 후  
 style-loader로 최종 컴파일하도록 설정하였습니다.
 
-```javascript
-    {
+```javascript  
+module:{
+  rules:[
+        {
           test: /\.(sc|c)ss$/,  // .scss .css
           use: [
             //'cache-loader',
@@ -671,24 +688,113 @@ style-loader로 최종 컴파일하도록 설정하였습니다.
             'sass-loader'
           ]
         },
+  ]
+}
 ```
 
 ### file-loader
 
 해당하는 확장자명을 가진 파일을 컴파일합니다.
-만약 파일이름이 동일할시 앞에 hash코드를 덧붙여 파일이름을 다르게 설정하도록하였습니다.
+만약 파일이름이 동일할 시 앞에 hash코드를 덧붙여 파일이름을 다르게 설정하도록하였습니다.
 
 ```javascript
-{
-  test: /\.(png|jpg|gif|svg|html)$/,
-  loader: 'file-loader',
-  options: {
-    name: '[name].[ext]?[hash]'
-  }
+module:{
+  rules:[
+    {
+      test: /\.(png|jpg|gif|svg|html)$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]?[hash]'
+      }
+    }
+  ]
 }
 ```
 
-### 
+### devtool
+
+개발자도구로 디버깅하기 용이하게 소스맵을 볼 수 있도록 설정하였습니다.
+
+```javascript
+ devtool: 'inline-source-map',
+```
+
+### optimization 
+
+코드들을 알아볼 수 있게 minimize 설정을 false로 하였습니다.
+
+```javascript
+optimization: {
+    minimize: false,
+ },
+```
+
+### HtmlWebpackPlugin
+
+webpack 번들을 제공하는 HTML 파일을 설정한되로 생성하도록 하였습니다.
+
+```javascript
+ plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      minify:false,
+      templateContent: `
+      <html>
+        <head>
+          <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+        </head>
+        <body>
+          <div id="app"></div>
+        </body>
+      </html>
+    `
+    })
+  ],
+```
+
+### devServer
+
+개발자 서버를 사용하여 애플리케이션을 더 빠르게 제작하였습니다.
+
+### historyApiFallback
+
+index.html페이지는 404응답 대신 제공되도록 하였습니다.  
+경로가 '/' 일때 index.html이 응답되도록 하였습니다.
+
+```javascript
+devServer:{
+  historyApiFallback: {
+            rewrites : [
+              { from: /^\/$/, to: 'index.html' }
+            ]
+          },
+}         
+```
+
+### static
+
+옵션을 사용하여 디렉터리에서 정적 파일을 제공하였습니다.
+
+```javascript
+const mv_Path = require('path')
+
+//...
+devServer:{
+  static : [
+            {
+              directory: mv_Path.resolve(__dirname, './demo'),
+              publicPath: '/',
+              watch: true,
+            },
+            {
+              directory: mv_Path.resolve(__dirname, './src'),
+              publicPath: '/jsLib',
+              watch: true,
+            },
+          ],
+}         
+
+```
 
 [__junGallery__]: http://jun.cafe24app.com/
 
