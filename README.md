@@ -590,5 +590,105 @@ WebPack설정을 어떻게 하였는지 설명합니다.
         },
 ```
 
+## resolve
+
+확장자를 설정한대로 순서대로 해석합니다.
+
+```javascript
+ resolve: {
+        extensions: ['.tsx','.ts','.jsx','.js','.json', '.css', '.scss', 'html'],
+  },
+```
+
+## module.rules
+
+모듈 규칙설정
+
+## Rule.exclude
+
+node_modules 파일은 번들링하지 않도록 제외하였습니다.
+
+
+```javascript
+rules:[
+  {exclude: /node_modules/,}
+]
+```
+
+### babel-loader
+
+Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용하여 컴파일하도록 설정하였습니다.
+@babel/preset-env으로  ES2015+ syntax버전에 맞게 컴파일되도록 하였고
+@babel/preset-react으로 jsx파일을 컴파일되도록 하였습니다.
+
+```javascript
+  {
+          test: /\.jsx?$/,   // .js or .jsx 
+          exclude: /node_modules/,
+          use : [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env', '@babel/preset-react'],
+              }
+            },
+          ],
+        },
+```
+
+### ts-loader
+
+typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여 컴파일하도록 설정하였습니다.
+
+
+```javascript
+  {
+      test: /\.tsx?$/,   
+      exclude: /node_modules/,
+      use : [
+        {
+          loader : 'ts-loader'
+        }
+      ],
+    },
+```
+
+### style-loader,css-loader,sass-loader
+
+확장자명이 .scss .css에 해당하는 파일을 컴파일하도록 설정하였습니다
+sass-loader로 scss파일을 컴파일 후 
+css-loader로 css파일을 컴파일 후
+style-loader로 최종 컴파일하도록 설정하였습니다.
+
+```javascript
+    {
+          test: /\.(sc|c)ss$/,  // .scss .css
+          use: [
+            //'cache-loader',
+            //MiniCssExtractPlugin.loader,
+            'style-loader',
+            'css-loader',
+            'sass-loader'
+          ]
+        },
+```
+
+### file-loader
+
+해당하는 확장자명을 가진 파일을 컴파일합니다.
+만약 파일이름이 동일할시 앞에 hash코드를 덧붙여 파일이름을 다르게 설정하도록하였습니다.
+
+```javascript
+{
+  test: /\.(png|jpg|gif|svg|html)$/,
+  loader: 'file-loader',
+  options: {
+    name: '[name].[ext]?[hash]'
+  }
+}
+```
+
+### 
+
 [__junGallery__]: http://jun.cafe24app.com/
 
