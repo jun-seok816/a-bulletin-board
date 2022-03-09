@@ -655,7 +655,7 @@ typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여
 
 ### style-loader , css-loader , sass-loader
 
-확장자명이 .scss .css에 해당하는 파일을 컴파일하도록 설정하였습니다
+확장자명이 .scss .css에 해당하는 파일을 컴파일하도록 설정하였습니다  
 sass-loader로 scss파일을 컴파일 후   
 css-loader로 css파일을 컴파일 후  
 style-loader로 최종 컴파일하도록 설정하였습니다.
