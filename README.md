@@ -651,8 +651,6 @@ typescript와 typescript XML에 해당하는 파일은 ts-loader를 사용하여
 
 
 ```javascript
-
-    
 module:{
   rules:[
      {
@@ -795,6 +793,23 @@ devServer:{
 }         
 
 ```
+
+### client
+
+브라우저의 log레벨을 설정합니다
+
+```javascript
+ client : {
+            progress : true,
+            overlay: true,
+          },
+```
+
+### NODE_ENV가 production일때 처리
+
+개발자용 build가 아닌 배포용 build를할때 처리방식입니다.  
+webpack객체의 devtool을 source-map으로 설정합니다.  
+
 
 [__junGallery__]: http://jun.cafe24app.com/
 
