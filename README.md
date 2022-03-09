@@ -34,29 +34,6 @@
 </div>
 
 
-### React
-
-React를 사용하여 Express에서 REST 아키텍처의 제약 조건을 준수하여 받아온 데이터를 이용하여 Single Page Application 게시판 사이트를 만들었습니다.
-
-<br/>
-
-### Webpack
-
-React와 css파일을 번들링하여 웹페이지 성능 최적화 하였습니다.
-
-<br/>
-<br/>
-
-<div align="center" style="padding-bottom:10em;">
-  <h1>Back-end Stack</h1>
-  <img src="https://img.shields.io/badge/Mysql-3D41C8?style=flat-square&logo=Mysql&logoColor=white"/>
-</div>
-
-### Mysql
-
-게시판 데이터는 Mysql를 사용하여 담아넣었습니다.
-
-
 <br/>
 
 
