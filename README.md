@@ -5,7 +5,7 @@
 * [Front 구조](#Front-구조)
 * [REST API Reference](#REST-API-Reference)
 * [DataBase](#DataBase)
-
+* [WebPack](#WebPack)
 
 <div align="center">
   <h1>Single Page Application 게시판👀</h1>
@@ -593,6 +593,34 @@ Host: http://jun.cafe24app.com/
 |f_user|INT|댓글 작성자|없음|
 |f_word|INT|댓글 본문|없음|
 |f_date|TIMESTAMP|댓글이 작성된 날짜|CURRENT_TIMESTAMP|
+
+
+# WebPack
+
+WebPack설정을 어떻게 하였는지 설명합니다.
+
+## entry
+
+엔트리 포인트는 React의 가장 상위 컴포넌트인 index.tsx로 설정하였습니다.
+
+```javascript
+ entry: {
+            "index" : './src/index.tsx',
+        },
+```
+
+## output
+
+번들을 내보낼 위치를 BackEnd폴더로 설정하였습니다.
+
+```javascript
+ output: {
+            path: mv_Path.resolve(__dirname, '../back/views'),
+            filename: 'index.js',
+            clean : true,
+            //chunkFormat: 'commonjs'
+        },
+```
 
 [__junGallery__]: http://jun.cafe24app.com/
 
