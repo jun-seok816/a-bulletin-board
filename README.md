@@ -604,7 +604,7 @@ WebPack설정을 어떻게 하였는지 설명합니다.
 
 모듈 규칙설정
 
-## Rule.exclude
+### Rule.exclude
 
 node_modules 파일은 번들링하지 않도록 제외하였습니다.
 
