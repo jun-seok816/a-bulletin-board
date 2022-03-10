@@ -613,6 +613,7 @@ node_modules 파일은 번들링하지 않도록 제외하였습니다.
 
 module:{
   rules:[
+    .../
     {exclude: /node_modules/,}
   ]
 }
