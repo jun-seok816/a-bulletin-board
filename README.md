@@ -797,7 +797,8 @@ devServer:{
 
 ### client
 
-브라우저의 log레벨을 설정합니다
+* progress : 브라우저에서 컴파일 진행률을 백분율로 인쇄합니다.
+* overlay : 컴파일중에 오류나 경고가 있는 경우 브라우저에 오류를 뿌리도록 설정합니다.  
 
 ```javascript
  client : {
@@ -809,7 +810,38 @@ devServer:{
 ### NODE_ENV가 production일때 처리
 
 개발자용 build가 아닌 배포용 build를할때 처리방식입니다.  
-webpack객체의 devtool을 source-map으로 설정합니다.  
+webpack객체의 devtool을 source-map으로 설정하여 개발자모드에서 소스내용을 볼 수 없게합니다.  
+webpack객체의 plugins에 설정값을 추가합니다.  
+
+* DefinePlugin은 컴파일 시간에 코드의 변수를 다른 값이나 표현식으로 바꿉니다.
+* LoaderOptionsPlugin은 전역로더에 minimize옵션을 추가하여 번들을 최소화합니다.
+
+```javascript
+const mv_Result ={
+//...
+  devtool: 'inline-source-map',
+  /...
+  plugins: [
+  /...
+  ],
+
+  if (process.env.NODE_ENV === 'production') {
+    //module.exports.devtool = 'inline-source-map'
+    mv_Result.devtool = 'source-map'
+    // http://vue-loader.vuejs.org/en/workflow/production.html
+    mv_Result.plugins = (module.exports.plugins || []).concat([
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: '"production"'
+        }
+      }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true
+      })
+    ])
+  }
+}
+```
 
 
 [__junGallery__]: http://jun.cafe24app.com/
