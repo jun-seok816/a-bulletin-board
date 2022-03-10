@@ -621,7 +621,7 @@ module:{
 
 ### babel-loader
 
-Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용하여 컴파일하도록 설정하였습니다.
+Javascript 와 JavaScript XML에 해당하는 파일은 babel-loader를 사용하여 컴파일하도록 설정하였습니다.  
 @babel/preset-env으로  ES2015+ syntax버전에 맞게 컴파일되도록 하였고,  
 @babel/preset-react으로 jsx파일을 컴파일되도록 하였습니다.
 
