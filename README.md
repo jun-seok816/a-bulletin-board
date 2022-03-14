@@ -115,13 +115,13 @@ Host: http://jun.cafe24app.com/
 
 <br/>
 
-## Signup API
+# Signup API
 
-#### Description
+## Description
 
 회원가입 및 사용자 인증API
 
-### Request
+## Request
 
 #### URL
   
@@ -141,7 +141,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
