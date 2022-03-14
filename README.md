@@ -62,15 +62,13 @@
 
 
 
-## Login API
+# Login API
 
+## Description
 
+　 사용자 인증 API
 
-### 　Description
-
-　　사용자 인증 API
-
-### Request
+## Request
 
 #### URL
   
@@ -90,7 +88,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
   
 |Name|Type|Description|Required|
@@ -100,14 +98,13 @@ Content-Type: application/json
 
 <br/>
 
-## Logout API
+# Logout API
 
-
-### Description
+## Description
 
 세션을 삭제합니다
 
-### Request
+## Request
 
 #### URL
   
@@ -120,7 +117,7 @@ Host: http://jun.cafe24app.com/
 
 ## Signup API
 
-### Description
+#### Description
 
 회원가입 및 사용자 인증API
 
@@ -153,13 +150,13 @@ Content-Type: application/json
 
 <br/>
 
-## LoginCheck API
+# LoginCheck API
 
-### Description
+## Description
 
 Session이 있는지에 따라 로그인상태 체크하는API
 
-### Request
+## Request
 
 #### URL
   
@@ -169,7 +166,7 @@ Host: http://jun.cafe24app.com/
 ```
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -178,13 +175,13 @@ Host: http://jun.cafe24app.com/
 
 <br/>
 
-## Write API
+# Write API
 
-### Description
+## Description
 
 게시글 작성 API
 
-### Request
+## Request
 
 #### URL
   
@@ -205,7 +202,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -216,13 +213,13 @@ Content-Type: application/json
 
 
 
-## Delete API
+# Delete API
 
-### Description
+## Description
 
 게시글 삭제 API
 
-### Request
+## Request
 
 #### URL
   
@@ -241,7 +238,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -250,13 +247,13 @@ Content-Type: application/json
 
 <br/>
 
-## Update API
+# Update API
 
-### Description
+## Description
 
 게시글 수정 API
 
-### Request
+## Request
 
 #### URL
   
@@ -276,7 +273,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -285,13 +282,13 @@ Content-Type: application/json
 
 <br/>
 
-## Recommend API
+# Recommend API
 
-### Description
+## Description
 
 게시글 추천 API 한사람이 같은 게시글을 한번만 추천할 수 있게 구현
 
-### Request
+## Request
 
 #### URL
   
@@ -310,7 +307,7 @@ Content-Type: application/json
   
  <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -320,13 +317,13 @@ Content-Type: application/json
 <br/>
 
 
-## Main/:category API
+# Main/:category API
 
-### Description
+## Description
 
 카테고리에 해당하는 게시글 목록을 반환하는 API
 
-### Request
+## Request
 
 #### URL
   
@@ -344,7 +341,7 @@ Host: http://jun.cafe24app.com/
   
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -353,13 +350,13 @@ Host: http://jun.cafe24app.com/
 
 <br/>
 
-## Main/:id API
+# Main/:id API
 
-### Description
+## Description
 
 ID에 해당하는 게시글정보를 반환하는 API
 
-### Request
+## Request
 
 #### URL
   
@@ -377,7 +374,7 @@ Host: http://jun.cafe24app.com/
   
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -387,13 +384,13 @@ Host: http://jun.cafe24app.com/
 
 <br/>
 
-## DatInsert API
+# DatInsert API
 
-### Description
+## Description
 
 게시글에  댓글작성 API
 
-### Request
+## Request
 
 #### URL
   
@@ -413,7 +410,7 @@ Content-Type: application/json
  
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -423,13 +420,13 @@ Content-Type: application/json
 <br/>
 
 
-## DatUpdate API
+# DatUpdate API
 
-### Description
+## Description
 
 게시글에 있는 댓글수정 API
 
-### Request
+## Request
 
 #### URL
   
@@ -449,7 +446,7 @@ Content-Type: application/json
  
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -458,13 +455,13 @@ Content-Type: application/json
 
 <br/>
 
-## DatDelete API
+# DatDelete API
 
-### Description
+## Description
 
 게시글에 있는 댓글삭제 API
 
-### Request
+## Request
 
 #### URL
   
@@ -482,7 +479,7 @@ Content-Type: application/json
  
 <br/>
   
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -491,13 +488,13 @@ Content-Type: application/json
 
 <br/>
 
-## Dat/Select/:id API
+# Dat/Select/:id API
 
-### Description
+## Description
 
 게시글에 있는 댓글목록 반환 API
 
-### Request
+## Request
 
 #### URL
   
@@ -506,7 +503,7 @@ GET /Dat/Select/:id HTTP/1.1
 Host: http://jun.cafe24app.com/
 ```
  
-### Response
+## Response
 
 |Name|Type|Description|Required|
 |---|---|---------|---|
@@ -530,7 +527,7 @@ Host: http://jun.cafe24app.com/
 |f_password|VARCHAR|유저의 PASSWORD|없음|
 
 
-##  tbl_noticeMain
+## tbl_noticeMain
 
 게시글에 대한 정보를 담는 table
 
@@ -548,7 +545,7 @@ Host: http://jun.cafe24app.com/
 
 
 
-##  tbl_recommend
+## tbl_recommend
 
 사용자가 특정게시물을 중복해서 추천했는지에 대한 정보를담는 table
 
@@ -557,7 +554,7 @@ Host: http://jun.cafe24app.com/
 |f_recommend|INT|추천기록, 사용자ID + 게시글 번호(UNIQUE)|없음|
 |f_number|INT|게시글의 번호|없음|
 
-##  tbl_dat
+## tbl_dat
 
 댓글에 대한 정보를담는 table
 
