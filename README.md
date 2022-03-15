@@ -40,7 +40,7 @@
 <div align="center">
     <h1>Architecture</h1>
     <p align="center">
-      <img src="https://user-images.githubusercontent.com/72478198/158169220-771a1351-5a5d-450b-8dd7-a98b55d94880.png" alt="animated" />
+      <img src="https://user-images.githubusercontent.com/72478198/158304863-00efffdd-75a9-414f-9f46-f627d94381e5.png" alt="animated" />
     </p>
  </div> 
 <br/>
